@@ -2,11 +2,9 @@
   <div>
     <h1>Нова пошта</h1>
     <h2>Оберіть населений пункт</h2>
-    <select v-model="punkt">
+    <select v-model="punkt" @click="viddil()">
       <option v-for="city in cities" v-bind:key="city.Ref" v-bind:value="city.Description">{{city.Description}}</option>
     </select>
-    <br>
-    <button @click="viddil()">ОК</button>
     <br>
     <h2>Поштове відділення</h2>
     <select>
